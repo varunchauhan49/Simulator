@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserInput renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <FormGroup
+    row={true}
+    tag="div"
+  >
+    <Label
+      for="exampleEmail"
+      sm={3}
+      tag="label"
+      widths={
+        Array [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+        ]
+      }
+    >
+      Command
+    </Label>
+    <Col
+      sm={9}
+      tag="div"
+      widths={
+        Array [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+        ]
+      }
+    >
+      <Input
+        onChange={[Function]}
+        placeholder="Command..."
+        type="text"
+      />
+    </Col>
+  </FormGroup>
+  <FormGroup
+    check={true}
+    row={true}
+    tag="div"
+  >
+    <Col
+      sm={
+        Object {
+          "offset": 2,
+          "size": 10,
+        }
+      }
+      tag="div"
+      widths={
+        Array [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+        ]
+      }
+    >
+      <Button
+        color="info"
+        onClick={[Function]}
+        tag="button"
+      >
+        Execute
+      </Button>
+    </Col>
+  </FormGroup>
+  <Modal
+    autoFocus={true}
+    backdrop={true}
+    backdropTransition={
+      Object {
+        "mountOnEnter": true,
+        "timeout": 150,
+      }
+    }
+    centered={false}
+    color="success"
+    fade={true}
+    isOpen={false}
+    keyboard={true}
+    modalTransition={
+      Object {
+        "timeout": 300,
+      }
+    }
+    onClosed={[Function]}
+    onOpened={[Function]}
+    role="dialog"
+    zIndex={1050}
+  >
+    <ModalHeader
+      charCode={215}
+      closeAriaLabel="Close"
+      tag="h5"
+      wrapTag="div"
+    >
+      Info
+    </ModalHeader>
+    <ModalBody
+      tag="div"
+    />
+    <ModalFooter
+      tag="div"
+    >
+      <Button
+        color="info"
+        onClick={[Function]}
+        tag="button"
+      >
+        Cancel
+      </Button>
+    </ModalFooter>
+  </Modal>
+</div>
+`;

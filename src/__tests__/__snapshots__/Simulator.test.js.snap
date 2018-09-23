@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Simulator renders correctly 1`] = `
+<Row
+  tag="div"
+>
+  <Col
+    tag="div"
+    widths={
+      Array [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+      ]
+    }
+    xs="5"
+  >
+    <Row
+      style={
+        Object {
+          "marginBottom": "5vh",
+          "padding": "0px 0px 20px 20px",
+        }
+      }
+      tag="div"
+    >
+      <Jumbotron
+        tag="div"
+      >
+        <h3>
+          Robot Simulator
+        </h3>
+        <p>
+          Orientation : 
+        </p>
+        <p>
+          X: 
+          -1
+        </p>
+        <p>
+          Y: 
+          -1
+        </p>
+        <hr
+          className="my-2"
+        />
+        <p>
+          A robot simulator which allows you to move robot across the board.
+        </p>
+      </Jumbotron>
+    </Row>
+    <Row
+      tag="div"
+    >
+      <UserInput
+        action={[Function]}
+      />
+    </Row>
+  </Col>
+  <Col
+    tag="div"
+    widths={
+      Array [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+      ]
+    }
+    xs="7"
+  >
+    <Board
+      face=""
+      posX={-1}
+      posY={-1}
+    />
+  </Col>
+</Row>
+`;
