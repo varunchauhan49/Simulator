@@ -27,14 +27,34 @@ class Board extends Component {
     }
   }
   render() {
-    const { x, y } = this.state;
+    const { x, y,face } = this.state;
     const {rows,cols} = this.props;
+    let iconRotate = ''
+    switch(face){
+      case 'south':{
+        iconRotate = ' fa-rotate-180'
+        break;
+      }
+      case 'east':{
+        iconRotate = ' fa-rotate-90'
+        break;
+      }
+      case 'west':{
+        iconRotate = ' fa-rotate-270'
+        break;
+      }
+      default:{
+        iconRotate = ''
+        break;
+      }
+    }
+
     let rowsItems = Array(rows).fill().map((_,i) => {
       let tds = Array(cols).fill().map((_,j) => {
         if(i === y && j === x){
           return(
             <td key={'td:' + i + ':' + j}>
-              <i className="fas fa-chess-bishop" style={{color:'red',fontSize:'32px'}}></i>
+              <i className={"fas fa-chess-bishop" + iconRotate} style={{color:'red',fontSize:'32px'}}></i>
             </td>
           )
         }

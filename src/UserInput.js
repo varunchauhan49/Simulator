@@ -179,7 +179,7 @@ class UserInput extends Component {
       if (face === '') {
         this.setState({
           modal:true,
-          response:"First command shoudl be PLACE command only. \nPLACE X,Y,F(PLACE 3,3,NORTH)"
+          response:"First command shoudl be PLACE command only. \nFor E.g. PLACE X,Y,F(PLACE 3,3,NORTH)"
         })
         return;
       }

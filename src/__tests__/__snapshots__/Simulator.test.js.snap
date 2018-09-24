@@ -1,86 +1,131 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Simulator renders correctly 1`] = `
-<Row
-  tag="div"
->
-  <Col
-    tag="div"
-    widths={
-      Array [
-        "xs",
-        "sm",
-        "md",
-        "lg",
-        "xl",
-      ]
-    }
-    xs="5"
-  >
-    <Row
-      style={
-        Object {
-          "marginBottom": "5vh",
-          "padding": "0px 0px 20px 20px",
-        }
+<div>
+  <Modal
+    autoFocus={true}
+    backdrop={true}
+    backdropTransition={
+      Object {
+        "mountOnEnter": true,
+        "timeout": 150,
       }
+    }
+    centered={false}
+    color="success"
+    fade={true}
+    isOpen={true}
+    keyboard={true}
+    modalTransition={
+      Object {
+        "timeout": 300,
+      }
+    }
+    onClosed={[Function]}
+    onOpened={[Function]}
+    role="dialog"
+    zIndex={1050}
+  >
+    <ModalHeader
+      charCode={215}
+      closeAriaLabel="Close"
+      tag="h5"
+      wrapTag="div"
+    >
+      Robot Simulator Info
+    </ModalHeader>
+    <ModalBody
       tag="div"
     >
-      <Jumbotron
+      <FormGroup
+        row={true}
         tag="div"
       >
-        <h3>
-          Robot Simulator
-        </h3>
-        <p>
-          Orientation : 
-        </p>
-        <p>
-          X: 
-          -1
-        </p>
-        <p>
-          Y: 
-          -1
-        </p>
-        <hr
-          className="my-2"
-        />
-        <p>
-          A robot simulator which allows you to move robot across the board.
-        </p>
-      </Jumbotron>
-    </Row>
-    <Row
+        <Label
+          for="exampleEmail"
+          sm={2}
+          tag="label"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          Rows
+        </Label>
+        <Col
+          sm={4}
+          tag="div"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          <Input
+            id="commandInput"
+            onChange={[Function]}
+            placeholder="Rows..."
+            type="text"
+          />
+        </Col>
+        <Label
+          for="exampleEmail"
+          sm={2}
+          tag="label"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          Cols
+        </Label>
+        <Col
+          sm={4}
+          tag="div"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          <Input
+            id="commandInput"
+            onChange={[Function]}
+            placeholder="Cols..."
+            type="text"
+          />
+        </Col>
+      </FormGroup>
+    </ModalBody>
+    <ModalFooter
       tag="div"
     >
-      <UserInput
-        action={[Function]}
-        cols={8}
-        rows={8}
-      />
-    </Row>
-  </Col>
-  <Col
-    tag="div"
-    widths={
-      Array [
-        "xs",
-        "sm",
-        "md",
-        "lg",
-        "xl",
-      ]
-    }
-    xs="7"
-  >
-    <Board
-      cols={8}
-      face=""
-      posX={-1}
-      posY={-1}
-      rows={8}
-    />
-  </Col>
-</Row>
+      <Button
+        color="info"
+        onClick={[Function]}
+        tag="button"
+      >
+        Update
+      </Button>
+    </ModalFooter>
+  </Modal>
+</div>
 `;
