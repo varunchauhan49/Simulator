@@ -1,10 +1,11 @@
 # Robot Simulator
 Robot simulator will help you simulate behaviour of robot on a board. UI will accept the command input from user as mentioned below.
+
 | Command | Details |
 | ------ | ------ |
 | PLACE X,Y,F | It will place robot at (x,y) position and direction F(North,South,East or West)  |
 | MOVE | Move the robot one step forward in the current direction |
-| LEFT or RIGHT |  It will rotate the robot 90 degrees in the specified direction without changing the position of the robot. |
+| LEFT or RIGHT |  It will rotate the robot 90 degrees in the specified direction without changing the position of the robot |
 | REPORT | It will announce the X,Y and orientation of the robot |
 
 
