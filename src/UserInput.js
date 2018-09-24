@@ -71,19 +71,19 @@ class UserInput extends Component {
     let { x, y, face } = this.state
     switch (face) {
       case 'north': {
-        x += 1;
+        y -= 1;
         break;
       }
       case 'south': {
-        x -= 1;
-        break;
-      }
-      case 'east': {
         y += 1;
         break;
       }
+      case 'east': {
+        x += 1;
+        break;
+      }
       case 'west': {
-        y -= 1;
+        x -= 1;
         break;
       }
       default: {
@@ -206,12 +206,12 @@ class UserInput extends Component {
         <FormGroup row>
           <Label for="exampleEmail" sm={3}>Command</Label>
           <Col sm={9}>
-            <Input type="text" onChange={(event) => this.setState({ commandInput: event.target.value })} placeholder="Command..." />
+            <Input type="text" id="commandInput" onChange={(event) => this.setState({ commandInput: event.target.value })} placeholder="Command..." />
           </Col>
         </FormGroup>
         <FormGroup check row>
           <Col sm={{ size: 10, offset: 2 }}>
-            <Button color="info" onClick={() => this.handleCommand()}>Execute</Button>
+            <Button color="info" id="execute" onClick={() => this.handleCommand()}>Execute</Button>
           </Col>
         </FormGroup>
         <Modal color="success"  isOpen={this.state.modal}>

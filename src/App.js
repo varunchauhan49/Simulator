@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Simulator from './Simulator';
 import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
   render() {

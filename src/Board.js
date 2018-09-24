@@ -30,7 +30,7 @@ class Board extends Component {
     let { x, y } = this.state;
     let rows = Array(8).fill().map((_,i) => {
       let tds = Array(8).fill().map((_,j) => {
-        if(i === x && j === y){
+        if(i === y && j === x){
           return(
             <td key={'td:' + i + ':' + j}>
               <i className="fas fa-chess-bishop" style={{color:'red',fontSize:'32px'}}></i>
