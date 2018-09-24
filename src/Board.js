@@ -27,9 +27,10 @@ class Board extends Component {
     }
   }
   render() {
-    let { x, y } = this.state;
-    let rows = Array(8).fill().map((_,i) => {
-      let tds = Array(8).fill().map((_,j) => {
+    const { x, y } = this.state;
+    const {rows,cols} = this.props;
+    let rowsItems = Array(rows).fill().map((_,i) => {
+      let tds = Array(cols).fill().map((_,j) => {
         if(i === y && j === x){
           return(
             <td key={'td:' + i + ':' + j}>
@@ -47,11 +48,14 @@ class Board extends Component {
         </tr>
       )
     });
+    // Reverse the array
+    rowsItems = rowsItems.reverse();
+
     return (
       <div className="Board">
         <table>
           <tbody>
-            {rows}
+            {rowsItems}
           </tbody>
         </table>
       </div>
@@ -62,6 +66,8 @@ class Board extends Component {
 Board.propTypes = {
   posX: PropTypes.number.isRequired,
   posY: PropTypes.number.isRequired,
+  rows: PropTypes.number.isRequired,
+  cols: PropTypes.number.isRequired,
   face: PropTypes.string
 }
 

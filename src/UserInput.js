@@ -1,5 +1,16 @@
 import React, { Component } from 'react';
-import { Button, FormGroup, Label, Input, Col, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { 
+  Button,
+  FormGroup,
+  Label,
+  Input,
+  Col,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter
+} from 'reactstrap';
+import PropTypes from 'prop-types';
 
 /*
 Class to accept user input and pass final position with direction to simulator class.
@@ -71,11 +82,11 @@ class UserInput extends Component {
     let { x, y, face } = this.state
     switch (face) {
       case 'north': {
-        y -= 1;
+        y += 1;
         break;
       }
       case 'south': {
-        y += 1;
+        y -= 1;
         break;
       }
       case 'east': {
@@ -107,6 +118,7 @@ class UserInput extends Component {
 
   // Evaluate the new coordinates of Robot
   evalCoordinates(x, y, face) {
+    const {rows,cols} = this.props;
     let direction = ['north', 'south', 'east', 'west'];
     if (direction.indexOf(face.toLowerCase()) === -1) {
       this.setState({
@@ -114,13 +126,13 @@ class UserInput extends Component {
         response:"Direction of robot incorrect"
       })
       return -1
-    } else if (x > 7 || x < 0) {
+    } else if (x > cols - 1 || x < 0) {
       this.setState({
         modal:true,
         response:"Value of co-ordinate X is incorrect, Robot will fall from board."
       })
       return -1
-    } else if (y > 7 || y < 0) {
+    } else if (y > rows - 1 || y < 0) {
       this.setState({
         modal:true,
         response:"Value of co-ordinate Y is incorrect, Robot will fall from board"
@@ -226,6 +238,11 @@ class UserInput extends Component {
       </div>
     );
   }
+}
+
+UserInput.propTypes = {
+  rows: PropTypes.number.isRequired,
+  cols: PropTypes.number.isRequired
 }
 
 export default UserInput;

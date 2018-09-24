@@ -38,11 +38,21 @@ class Simulator extends Component{
             </Jumbotron>
           </Row>
           <Row>
-            <UserInput action={(x,y,face) => this.handleAction(x,y,face)} />
+            <UserInput 
+              action={(x,y,face) => this.handleAction(x,y,face)}
+              rows={8}
+              cols={8} 
+              />
           </Row>
         </Col>
         <Col xs="7">
-          <Board posX={stepX} posY={stepY} face={stepFace}/>
+          <Board 
+            posX={stepX}
+            posY={stepY}
+            face={stepFace}
+            rows={8}
+            cols={8}
+            />
         </Col>
       </Row>
     );

@@ -56,6 +56,8 @@ exports[`Simulator renders correctly 1`] = `
     >
       <UserInput
         action={[Function]}
+        cols={8}
+        rows={8}
       />
     </Row>
   </Col>
@@ -73,9 +75,11 @@ exports[`Simulator renders correctly 1`] = `
     xs="7"
   >
     <Board
+      cols={8}
       face=""
       posX={-1}
       posY={-1}
+      rows={8}
     />
   </Col>
 </Row>
